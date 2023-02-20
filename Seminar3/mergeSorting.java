@@ -26,18 +26,18 @@ public class mergeSorting {
         // Слияние
         int index1 = oneIndex;
         int index2 = middle;
-        int destIndex = oneIndex;
+        int targetIndex = oneIndex;
         int[] result = sorted1 == buffer1 ? buffer2 : buffer1;
         while (index1 < middle && index2 < finIndex) {
-            result[destIndex++] = sorted1[index1] < sorted2[index2]
+            result[targetIndex++] = sorted1[index1] < sorted2[index2]
                     ? sorted1[index1++]
                     : sorted2[index2++];
         }
         while (index1 < middle) {
-            result[destIndex++] = sorted1[index1++];
+            result[targetIndex++] = sorted1[index1++];
         }
         while (index2 < finIndex) {
-            result[destIndex++] = sorted2[index2++];
+            result[targetIndex++] = sorted2[index2++];
         }
         return result;
     }
