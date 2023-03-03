@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class task {
+public class map {
     public static void main(String[] args) {
 
         MapGenerator mg = new MapGenerator();
