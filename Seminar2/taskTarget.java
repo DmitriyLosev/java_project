@@ -11,7 +11,7 @@ public class taskTarget {
                 }
             }
         }
-        System.out.println("Ваш запрос обработан: "+targetStr);
+        System.out.println("Ваш запрос обработан: " + "select * from students where " + targetStr);
     }
 }
 
