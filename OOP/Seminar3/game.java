@@ -15,10 +15,10 @@ public class BullsAndCowsGame {
         Scanner scanner = new Scanner(System.in);
         int attemptsLeft = 10;
         while (true) {
-            System.out.println("Введите " + SECRET_NUMBER_LENGTH + "-значное число (у вас есть " + attemptsLeft + " попыток):");
+            System.out.println("Enter a " + SECRET_NUMBER_LENGTH + "-digit number (you have " + attemptsLeft + " attempts left):");
             String guess = scanner.next();
             if (guess.length() != SECRET_NUMBER_LENGTH) {
-                System.out.println("Пожалуйста введитн " + SECRET_NUMBER_LENGTH + "-значное число.");
+                System.out.println("Please enter a " + SECRET_NUMBER_LENGTH + "-digit number.");
                 continue;
             }
             int bulls = 0;
@@ -33,13 +33,13 @@ public class BullsAndCowsGame {
             }
             attemptsLeft--;
             if (bulls == SECRET_NUMBER_LENGTH) {
-                System.out.println("Вы победили!");
+                System.out.println("You win!");
                 break;
             } else if (attemptsLeft == 0) {
-                System.out.println("Вы проиграли. Загаданное число " + secretNumber + ".");
+                System.out.println("You lose. The secret number was " + secretNumber + ".");
                 break;
             } else {
-                System.out.println(bulls + " Быки и " + cows + " Коровы. Попробуйте снова.");
+                System.out.println(bulls + " bull(s) and " + cows + " cow(s). Try again.");
             }
         }
     }
@@ -59,3 +59,4 @@ public class BullsAndCowsGame {
         secretNumber = builder.toString();
     }
 }
+
